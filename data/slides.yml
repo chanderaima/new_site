@@ -1,0 +1,16 @@
+slides:
+  - title: "Slide 1"
+    description: "Description for Slide 1"
+    weight: 1
+    link: "/page1"
+    background: "/images/backgrounds/_hero-background.jpg"
+  - title: "Slide 2"
+    description: "Description for Slide 2"
+    weight: 2
+    link: "/page2"
+    background: "/images/backgrounds/hero-background.jpg"
+  - title: "Slide 3"
+    description: "Description for Slide 3"
+    weight: 3
+    link: "/page3"
+    background: "/images/backgrounds/_hero-background.jpg"

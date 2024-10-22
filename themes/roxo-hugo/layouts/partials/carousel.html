@@ -1,0 +1,44 @@
+<div id="carousel" class="carousel">
+    {{ range .Site.Data.slides.slides }}
+      <div class="carousel-slide" style="background-image: url('{{ .background | relURL }}');">
+        <a href="{{ .link }}">
+          <h2 class="carousel-title">{{ .title }}</h2>
+          <p class="carousel-description">{{ .description }}</p>
+        </a>
+      </div>
+    {{ end }}
+    <div class="carousel-dots">
+      {{ range $index, $element := .Site.Data.slides.slides }}
+        <span class="dot" onclick="currentSlide({{ add $index 1 }})"></span>
+      {{ end }}
+    </div>
+  </div>
+  <script>
+    let slideIndex = 1;
+    const slideDuration = 50000; // Set the slide duration (in milliseconds)
+  
+    showSlides(slideIndex);
+  
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("carousel-slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      slideIndex++;
+      setTimeout(() => showSlides(slideIndex), slideDuration); // Use the slideDuration variable
+    }
+  
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  </script>
+  

@@ -1,0 +1,68 @@
+<div class="scrolling-track track1">
+  {{ range .Site.Data.logos.logos }}
+    <div class="logo-item">
+      <img src="{{ .image | relURL }}" alt="{{ .name }}">
+    </div>
+  {{ end }}
+  {{ range .Site.Data.logos.logos }}
+    <div class="logo-item">
+      <img src="{{ .image | relURL }}" alt="{{ .name }}">
+    </div>
+  {{ end }}
+</div>
+<div class="scrolling-track track2">
+  {{ range .Site.Data.logos.logos }}
+    <div class="logo-item">
+      <img src="{{ .image | relURL }}" alt="{{ .name }}">
+    </div>
+  {{ end }}
+  {{ range .Site.Data.logos.logos }}
+    <div class="logo-item">
+      <img src="{{ .image | relURL }}" alt="{{ .name }}">
+    </div>
+  {{ end }}
+</div>
+<style>
+  .scrolling-track {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .scrolling-track.track1 {
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .scrolling-track.track2 {
+    animation: scroll-right 30s linear infinite;
+  }
+
+  .logo-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .logo-item img {
+    width: 100px;
+    height: auto;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(-50);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+</style>

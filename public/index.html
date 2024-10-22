@@ -66,7 +66,7 @@
           
           <li class="nav-item">
             <a class="nav-link" href="http://localhost:1313/portfolio"
-              >Portfolio</a
+              >Industry</a
             >
           </li>
            
@@ -109,50 +109,262 @@
 <main>
 
 
+
+<div id="carousel" class="carousel">
+    
+      <div class="carousel-slide" style="background-image: url('/images/backgrounds/_hero-background.jpg');">
+        <a href="/page1">
+          <h2 class="carousel-title">Slide 1</h2>
+          <p class="carousel-description">Description for Slide 1</p>
+        </a>
+      </div>
+    
+      <div class="carousel-slide" style="background-image: url('/images/backgrounds/hero-background.jpg');">
+        <a href="/page2">
+          <h2 class="carousel-title">Slide 2</h2>
+          <p class="carousel-description">Description for Slide 2</p>
+        </a>
+      </div>
+    
+      <div class="carousel-slide" style="background-image: url('/images/backgrounds/_hero-background.jpg');">
+        <a href="/page3">
+          <h2 class="carousel-title">Slide 3</h2>
+          <p class="carousel-description">Description for Slide 3</p>
+        </a>
+      </div>
+    
+    <div class="carousel-dots">
+      
+        <span class="dot" onclick="currentSlide( 1 )"></span>
+      
+        <span class="dot" onclick="currentSlide( 2 )"></span>
+      
+        <span class="dot" onclick="currentSlide( 3 )"></span>
+      
+    </div>
+  </div>
+  <script>
+    let slideIndex = 1;
+    const slideDuration = 50000; 
   
-  <!-- Site Hero Start -->
-  <section class="site-hero" style="background-image: url('images/backgrounds/hero-background.jpg');">
+    showSlides(slideIndex);
+  
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("carousel-slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      slideIndex++;
+      setTimeout(() => showSlides(slideIndex), slideDuration); 
+    }
+  
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  </script>
+  
+
+
+ 
+  
+  <section class="site-project" id="project">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="site-hero-content text-center">
-            <h6>WE WORK HARD, WE PLAY HARD</h6>
-            <h1>
-              We’re a Design Studio That Belies In the Great Ideas
-            </h1>
-            <ul class="site-hero-content-buttons">
-              <li>
-                <a href="http://localhost:1313/portfolio" class="btn btn-secondary">
-                  <span class="btn-area">
-                    <span data-text="See Our Works">
-                      See Our Works
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="http://localhost:1313/contact" class="btn btn-primary">
-                  <span class="btn-area">
-                    <span data-text="Connect with Us">
-                      Connect with Us
-                    </span>
-                  </span>
-                </a>
-              </li>
-              
-            </ul>
+        <div class="col-12">
+          <div class="section-title">
+            <h2>Our Portfolio</h2>
+            <p>Crafting experiences and seeking to make the complex clear &amp; beautiful.</p>
           </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <div class="site-project-item">
+            <div class="site-project-item-thumb">
+              <img src="http://localhost:1313/images/projects/project-thumb-four.jpg" alt="project-thumb">
+            </div>
+            <div class="site-project-item-content">
+              <span>PRODUCT LABEL</span>
+              <h3>Banking &amp; Financial Services</h3>
+              <a href="http://localhost:1313/portfolio/banking_finance/" class="read-more">view project</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <div class="site-project-item">
+            <div class="site-project-item-thumb">
+              <img src="http://localhost:1313/images/projects/project-thumb-one.jpg" alt="project-thumb">
+            </div>
+            <div class="site-project-item-content">
+              <span>UI UX</span>
+              <h3>Communications</h3>
+              <a href="http://localhost:1313/portfolio/communications/" class="read-more">view project</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <div class="site-project-item">
+            <div class="site-project-item-thumb">
+              <img src="http://localhost:1313/images/projects/project-thumb-two.jpg" alt="project-thumb">
+            </div>
+            <div class="site-project-item-content">
+              <span>PRODUCT DESIGN</span>
+              <h3>OSEN CLOCK</h3>
+              <a href="http://localhost:1313/portfolio/osen-clock/" class="read-more">view project</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <div class="site-project-item">
+            <div class="site-project-item-thumb">
+              <img src="http://localhost:1313/images/projects/project-thumb-three.jpg" alt="project-thumb">
+            </div>
+            <div class="site-project-item-content">
+              <span>REBRAND</span>
+              <h3>SEAMLESS WATCH</h3>
+              <a href="http://localhost:1313/portfolio/seamless-watch/" class="read-more">view project</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 text-center text-lg-left">
+          <a href="portfolio" class="site-project-cta"></a>
         </div>
       </div>
     </div>
-    <a href="#counter" class="site-hero-scroll scroll-to">
-      <img src="http://localhost:1313/images/arrow-down.svg" alt="arrow-down">
-    </a>
   </section>
-  <!-- Site Hero End -->
   
 
 
+
+<div class="scrolling-track track1">
+  
+    <div class="logo-item">
+      <img src="/images/logo/toyota.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/abb.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/harman.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/airbus.png" alt="Logo 1">
+    </div>
+  
+  
+    <div class="logo-item">
+      <img src="/images/logo/toyota.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/abb.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/harman.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/airbus.png" alt="Logo 1">
+    </div>
+  
+</div>
+<div class="scrolling-track track2">
+  
+    <div class="logo-item">
+      <img src="/images/logo/toyota.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/abb.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/harman.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/airbus.png" alt="Logo 1">
+    </div>
+  
+  
+    <div class="logo-item">
+      <img src="/images/logo/toyota.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/abb.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/harman.png" alt="Logo 1">
+    </div>
+  
+    <div class="logo-item">
+      <img src="/images/logo/airbus.png" alt="Logo 1">
+    </div>
+  
+</div>
+<style>
+  .scrolling-track {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .scrolling-track.track1 {
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .scrolling-track.track2 {
+    animation: scroll-right 30s linear infinite;
+  }
+
+  .logo-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .logo-item img {
+    width: 100px;
+    height: auto;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(-50);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+</style>
+ 
 
 
   
@@ -197,80 +409,6 @@
     </div>
   </section>
   
-
-
-
-  
-  <section class="site-project" id="project">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h2>OUR RECENT WORKS</h2>
-            <p>Crafting experiences and seeking to make the complex clear &amp; beautiful.</p>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 col-md-10 mx-auto">
-          <div class="site-project-item">
-            <div class="site-project-item-thumb">
-              <img src="http://localhost:1313/images/projects/project-thumb-four.jpg" alt="project-thumb">
-            </div>
-            <div class="site-project-item-content">
-              <span>PRODUCT LABEL</span>
-              <h3>KIO-TAPE BRAND</h3>
-              <a href="http://localhost:1313/portfolio/kio-tape-2/" class="read-more">view project</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 col-md-10 mx-auto">
-          <div class="site-project-item">
-            <div class="site-project-item-thumb">
-              <img src="http://localhost:1313/images/projects/project-thumb-one.jpg" alt="project-thumb">
-            </div>
-            <div class="site-project-item-content">
-              <span>UI UX</span>
-              <h3>USE-LESS BRAND</h3>
-              <a href="http://localhost:1313/portfolio/use-less-brand/" class="read-more">view project</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 col-md-10 mx-auto">
-          <div class="site-project-item">
-            <div class="site-project-item-thumb">
-              <img src="http://localhost:1313/images/projects/project-thumb-two.jpg" alt="project-thumb">
-            </div>
-            <div class="site-project-item-content">
-              <span>PRODUCT DESIGN</span>
-              <h3>OSEN CLOCK</h3>
-              <a href="http://localhost:1313/portfolio/osen-clock/" class="read-more">view project</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 col-md-10 mx-auto">
-          <div class="site-project-item">
-            <div class="site-project-item-thumb">
-              <img src="http://localhost:1313/images/projects/project-thumb-three.jpg" alt="project-thumb">
-            </div>
-            <div class="site-project-item-content">
-              <span>REBRAND</span>
-              <h3>SEAMLESS WATCH</h3>
-              <a href="http://localhost:1313/portfolio/seamless-watch/" class="read-more">view project</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-12 text-center text-lg-left">
-          <a href="portfolio" class="site-project-cta"></a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
 
 
 
@@ -532,5 +670,6 @@
 <script src="http://localhost:1313/js/vendor.min.js"></script>
 
 <script src="http://localhost:1313/js/script.min.js"></script>
-</body>
+
+    </body>
 </html>

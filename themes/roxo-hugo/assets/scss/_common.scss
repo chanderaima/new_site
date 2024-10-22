@@ -68,3 +68,82 @@ select.form-control{
 textarea.form-control{
   height: auto;
 }
+
+.scrolling-track {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.logo-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.logo-item img {
+  width: 100px;
+  height: auto;
+}
+
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  height: 400px; /* Adjust height as needed */
+}
+.carousel {
+  position: relative;
+  max-width: 100%; /* Adjust width as needed */
+  margin: auto;
+  height: 600px; /* Adjust height as needed */
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.carousel-slide a {
+  text-decoration: none;
+  color: black;
+}
+
+.carousel-title {
+  font-family: 'Arial', sans-serif; /* Set font for title */
+  color: #FF5733; /* Set color for title */
+  font-size: 10em;
+}
+
+.carousel-description {
+  font-family: 'Verdana', sans-serif; /* Set font for description */
+  color: #333; /* Set color for description */
+  font-size: 1.2em;
+}
+
+.carousel-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}

@@ -16,7 +16,7 @@ summarylength = 25
     url     = "about"
     weight  = 2
   [[menu.nav]]
-    name    = "Portfolio"
+    name    = "Industry"
     url     = "portfolio"
     weight  = 3
   [[menu.nav]]
@@ -75,8 +75,8 @@ summarylength = 25
   [params.banner]
     enable                = true
     background_image      = "images/backgrounds/hero-background.jpg"
-    heading               = "We’re a Design Studio That Belies In the Great Ideas"
-    tagline               = "WE WORK HARD, WE PLAY HARD"
+    heading               = "Lead through the challenges and give you success!"
+    tagline               = "At Cadmaxx we characterise Digital transformation as a connected digital mesh of smart devices delivering digital services, everywhere to everyone."
     primary_button        = "See Our Works"
     primary_button_url    = "portfolio"
     secondary_button      = "Connect with Us"
@@ -87,7 +87,7 @@ summarylength = 25
 
   [params.portfolio]
     enable    = true
-    title     = "OUR RECENT WORKS"
+    title     = "Our Portfolio"
     subtitle  = "Crafting experiences and seeking to make the complex clear & beautiful."
     view_project = "view project"
     more_works = "MORE WORKS"

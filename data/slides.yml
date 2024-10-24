@@ -1,16 +1,16 @@
 slides:
-  - title: "Slide 1"
-    description: "Description for Slide 1"
+  - title: "Bring Performance & Ideas for Innovations Work"
+    description: "We offers a portfolio of products- digital solutions and services, from Designing of Small socket to a large substation which is impact on digital innovations."
     weight: 1
     link: "/page1"
-    background: "/images/backgrounds/_hero-background.jpg"
-  - title: "Slide 2"
-    description: "Description for Slide 2"
+    background: "/images/backgrounds/bg1.jpg"
+  - title: "Lead through the challenges and give you success!"
+    description: "At Cadmaxx we characterise Digital transformation as a connected digital mesh of smart devices delivering digital services, everywhere to everyone."
     weight: 2
     link: "/page2"
-    background: "/images/backgrounds/hero-background.jpg"
+    background: "/images/backgrounds/bg2.jpg"
   - title: "Slide 3"
     description: "Description for Slide 3"
     weight: 3
     link: "/page3"
-    background: "/images/backgrounds/_hero-background.jpg"
+    background: "/images/backgrounds/bg1.jpg"

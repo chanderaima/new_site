@@ -117,13 +117,24 @@ textarea.form-control{
 .carousel-title {
   font-family: 'Arial', sans-serif; /* Set font for title */
   color: #FF5733; /* Set color for title */
-  font-size: 10em;
+  font-size: 2em;
+  position: absolute; /* Allows you to use top, right, bottom, left properties */
+  top: 60%; /* Adjust this value to control vertical position */
+  left: 50%; /* Adjust this value to control horizontal position */
+  transform: translate(-50%, -50%); /* Centers the title */
+  text-align: left; /* Centers the text */
 }
+
 
 .carousel-description {
   font-family: 'Verdana', sans-serif; /* Set font for description */
-  color: #333; /* Set color for description */
+  color: black; /* Set color for description */
   font-size: 1.2em;
+  position: absolute; /* Allows you to use top, right, bottom, left properties */
+  top: 70%; /* Adjust this value to control vertical position */
+  left: 50%; /* Adjust this value to control horizontal position */
+  transform: translate(-50%, -50%); /* Centers the title */
+  text-align: left; /* Centers the text */
 }
 
 .carousel-dots {

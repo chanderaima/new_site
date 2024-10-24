@@ -6,7 +6,7 @@ slides:
     background: "/images/backgrounds/bg1.jpg"
   - title: "Lead through the challenges and give you success!"
     description: "At Cadmaxx we characterise Digital transformation as a connected digital mesh of smart devices delivering digital services, everywhere to everyone."
-    weight: 2
+    weight: 6
     link: "/page2"
     background: "/images/backgrounds/bg2.jpg"
   - title: "Slide 3"
@@ -14,3 +14,18 @@ slides:
     weight: 3
     link: "/page3"
     background: "/images/backgrounds/bg1.jpg"
+  - title: "Mr Chugh's Slide"
+    description: "Char Bottle VOkda"
+    weight: 3
+    link: "/page3"
+    background: "/images/backgrounds/bg3.jpg"    
+  - title: "Bring Performance & Ideas for Innovations Work"
+    description: "We offers a portfolio of products- digital solutions and services, from Designing of Small socket to a large substation which is impact on digital innovations."
+    weight: 5
+    link: "/page1"
+    background: "/images/backgrounds/bg1.jpg"    
+  - title: "Ram's Slide"
+    description: "We offers a portfolio of products- digital solutions and services, from Designing of Small socket to a large substation which is impact on digital innovations."
+    weight: 2
+    link: "/page1"
+    background: "/images/backgrounds/bg3.jpg"    
